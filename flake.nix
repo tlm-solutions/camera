@@ -75,8 +75,8 @@
 
       packages_vms = lib.foldl (x: y: lib.mergeAttrs x { "${y.config.system.name}-vm" = y.config.system.build.vm; }) { } (lib.attrValues system_configs);
 
-      packages_img_aarch64 = lib.foldl (x: y: lib.mergeAttrs x { "${y.config.system.name}-image" = y.config.system.build.diskImage; }) { } (lib.filter (x: x.config.system.build.toplevel.system == "x86_64-linux") (lib.attrValues system_configs));
-      packages_img_x86 = lib.foldl (x: y: lib.mergeAttrs x { "${y.config.system.name}-image" = y.config.system.build.sdImage; }) { } (lib.filter (x: x.config.system.build.toplevel.system == "aarch64-linux") (lib.attrValues system_configs));
+      packages_img_x86 = lib.foldl (x: y: lib.mergeAttrs x { "${y.config.system.name}-image" = y.config.system.build.diskImage; }) { } (lib.filter (x: x.config.system.build.toplevel.system == "x86_64-linux") (lib.attrValues system_configs));
+      packages_img_aarch64 = lib.foldl (x: y: lib.mergeAttrs x { "${y.config.system.name}-image" = y.config.system.build.sdImage; }) { } (lib.filter (x: x.config.system.build.toplevel.system == "aarch64-linux") (lib.attrValues system_configs));
     in
     {
       nixosConfigurations = system_configs;
