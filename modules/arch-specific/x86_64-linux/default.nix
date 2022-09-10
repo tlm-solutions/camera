@@ -1,0 +1,1 @@
+{ diskModule, ... }: { imports = [ diskModule ]; }

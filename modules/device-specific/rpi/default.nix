@@ -1,0 +1,6 @@
+{ rpiHwConfig, ... }:
+{
+  imports = [
+    rpiHwConfig
+  ];
+}
