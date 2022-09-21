@@ -33,20 +33,23 @@
         {
           arch = "aarch64-linux";
           name = "rpi3";
+          pretty-name = "Raspberry Pi 3B";
         }
         {
           arch = "aarch64-linux";
           name = "rpi4";
+          pretty-name = "Raspberry Pi 4";
         }
         {
           arch = "x86_64-linux";
           name = "dell-wyse-3040";
+          pretty-name = "Dell Wyse 3040";
         }
       ];
 
       systems = lib.cartesianProductOfSets { host = hosts; device = devices; };
-      generate_system = (host: arch: device: {
-        "${host}-${arch}-${device}" = nixpkgs.lib.nixosSystem
+      generate_system = (host: arch: device: pretty-name: {
+        "${host}-${device}" = nixpkgs.lib.nixosSystem
           {
             system = arch;
             specialArgs = {
@@ -60,23 +63,25 @@
               ./modules/${host}
               ./modules/device-specific/${device}
               ./user-config
+              # production-ready software!
+              { config._module.args = { prettyDeviceName = pretty-name; }; }
               {
                 nixpkgs.overlays = [
                   dump-dvb.overlays.default
                 ];
-                networking.hostName = lib.mkForce "${host}-${arch}-${device}";
+                networking.hostName = lib.mkForce "${host}";
               }
             ];
           };
       }
       );
 
-      system_configs = lib.foldl (x: y: lib.mergeAttrs x (generate_system y.host y.device.arch y.device.name)) { } systems;
+      system_configs = lib.foldl (x: y: lib.mergeAttrs x (generate_system y.host y.device.arch y.device.name y.device.pretty-name)) { } systems;
 
-      packages_vms = lib.foldl (x: y: lib.mergeAttrs x { "${y.config.system.name}-vm" = y.config.system.build.vm; }) { } (lib.attrValues system_configs);
+      packages_vms = lib.foldl (x: y: lib.mergeAttrs x { "${y._module.args.prettyDeviceName}-vm" = y.config.system.build.vm; }) { } (lib.attrValues system_configs);
 
-      packages_img_x86 = lib.foldl (x: y: lib.mergeAttrs x { "${y.config.system.name}-image" = y.config.system.build.diskImage; }) { } (lib.filter (x: x.config.system.build.toplevel.system == "x86_64-linux") (lib.attrValues system_configs));
-      packages_img_aarch64 = lib.foldl (x: y: lib.mergeAttrs x { "${y.config.system.name}-image" = y.config.system.build.sdImage; }) { } (lib.filter (x: x.config.system.build.toplevel.system == "aarch64-linux") (lib.attrValues system_configs));
+      packages_img_x86 = lib.foldl (x: y: lib.mergeAttrs x { "${y._module.args.prettyDeviceName}-image" = y.config.system.build.diskImage; }) { } (lib.filter (x: x.config.system.build.toplevel.system == "x86_64-linux") (lib.attrValues system_configs));
+      packages_img_aarch64 = lib.foldl (x: y: lib.mergeAttrs x { "${y._module.args.prettyDeviceName}-image" = y.config.system.build.sdImage; }) { } (lib.filter (x: x.config.system.build.toplevel.system == "aarch64-linux") (lib.attrValues system_configs));
     in
     {
       nixosConfigurations = system_configs;
