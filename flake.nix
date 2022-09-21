@@ -25,26 +25,32 @@
       pkgs = nixpkgs.legacyPackages."x86_64-linux";
       lib = pkgs.lib;
 
-      hosts = let hosts = [
-        "user_radio"
-      ]; in
-      map (x: assert lib.assertMsg (!(lib.hasInfix "-" x)) "hosts string cannot contain -"; x) hosts;
+      hosts =
+        let
+          hosts = [
+            "user_radio"
+          ];
+        in
+        map (x: assert lib.assertMsg (!(lib.hasInfix "-" x)) "hosts string cannot contain -"; x) hosts;
 
-      devices = let devices = [
-        {
-          arch = "aarch64-linux";
-          name = "Raspberry_Pi_3B";
-        }
-        {
-          arch = "aarch64-linux";
-          name = "Raspberry_Pi_4";
-        }
-        {
-          arch = "x86_64-linux";
-          name = "Dell_Wyse_3040";
-        }
-      ]; in
-      map (x: assert lib.assertMsg (!(lib.hasInfix "-" x.name)) "device name cannot contain '-'"; x) devices;
+      devices =
+        let
+          devices = [
+            {
+              arch = "aarch64-linux";
+              name = "Raspberry_Pi_3B";
+            }
+            {
+              arch = "aarch64-linux";
+              name = "Raspberry_Pi_4";
+            }
+            {
+              arch = "x86_64-linux";
+              name = "Dell_Wyse_3040";
+            }
+          ];
+        in
+        map (x: assert lib.assertMsg (!(lib.hasInfix "-" x.name)) "device name cannot contain '-'"; x) devices;
 
       systems = lib.cartesianProductOfSets { host = hosts; device = devices; };
       generate_system = (host: arch: device: {
@@ -87,6 +93,6 @@
 
       # production-ready software! TIL that hydra cannot do spaces in the JobName
       hydraJobs = (lib.mapAttrs (k: v: { "x86_64-linux" = v; }) (packages_img_x86)) //
-                  (lib.mapAttrs (k: v: { "aarch64-linux" = v; }) (packages_img_aarch64));
+        (lib.mapAttrs (k: v: { "aarch64-linux" = v; }) (packages_img_aarch64));
     };
 }
