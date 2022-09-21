@@ -25,12 +25,12 @@
       pkgs = nixpkgs.legacyPackages."x86_64-linux";
       lib = pkgs.lib;
 
-      # TODO a big explanatory comment about how stuff should be named to not brake downstream shtuff.
-      hosts = [
+      hosts = let hosts = [
         "user_radio"
-      ];
+      ]; in
+      map (x: assert lib.assertMsg (!(lib.hasInfix "-" x)) "hosts string cannot contain -"; x) hosts;
 
-      devices = [
+      devices = let devices = [
         {
           arch = "aarch64-linux";
           name = "Raspberry_Pi_3B";
@@ -43,7 +43,8 @@
           arch = "x86_64-linux";
           name = "Dell_Wyse_3040";
         }
-      ];
+      ]; in
+      map (x: assert lib.assertMsg (!(lib.hasInfix "-" x.name)) "device name cannot contain '-'"; x) devices;
 
       systems = lib.cartesianProductOfSets { host = hosts; device = devices; };
       generate_system = (host: arch: device: {
@@ -61,7 +62,6 @@
               ./modules/${host}
               ./modules/device-specific/${device}
               ./user-config
-              #{ config._module.args = { prettyDeviceName = ; }; }
               {
                 nixpkgs.overlays = [
                   dump-dvb.overlays.default
