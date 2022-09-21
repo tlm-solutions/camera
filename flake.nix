@@ -33,17 +33,17 @@
         {
           arch = "aarch64-linux";
           name = "rpi3";
-          pretty-name = "Raspberry Pi 3B";
+          pretty-name = "Raspberry_Pi_3B";
         }
         {
           arch = "aarch64-linux";
           name = "rpi4";
-          pretty-name = "Raspberry Pi 4";
+          pretty-name = "Raspberry_Pi_4";
         }
         {
           arch = "x86_64-linux";
           name = "dell-wyse-3040";
-          pretty-name = "Dell Wyse 3040";
+          pretty-name = "Dell_Wyse_3040";
         }
       ];
 
