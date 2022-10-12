@@ -1,7 +1,7 @@
-{ dellHwConfig, diskModule, ... }:
+{ diskModule, ... }:
 {
   imports = [
-    dellHwConfig
     diskModule
+    ./dell-wyse-3040.nix
   ];
 }

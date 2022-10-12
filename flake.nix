@@ -60,8 +60,6 @@
             specialArgs = {
               inherit inputs;
               diskModule = inputs.dump-dvb.nixosModules.disk-module;
-              rpiHwConfig = "${inputs.ddvb-deployment}/hardware/rpi-3b-4b.nix";
-              dellHwConfig = "${inputs.ddvb-deployment}/hardware/dell-wyse-3040.nix";
             };
             modules = [
               dump-dvb.nixosModules.default
