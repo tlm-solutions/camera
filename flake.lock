@@ -133,11 +133,11 @@
         "windshield": "windshield"
       },
       "locked": {
-        "lastModified": 1665264487,
-        "narHash": "sha256-BUC7vSsIkbAcHkZJOuAOWEB5umidhjhEl7u9QiIigfA=",
+        "lastModified": 1665684549,
+        "narHash": "sha256-JupmLnzjNXguDzmZHEolM17uZB5P2L9Sh12OdVkmux8=",
         "owner": "dump-dvb",
         "repo": "dump-dvb.nix",
-        "rev": "6f07a1caa84811910f01d3dfd3ad4b70505f5b94",
+        "rev": "b9d99d97ca278ff86f2262f83281acdfb1d23ed2",
         "type": "github"
       },
       "original": {
@@ -298,6 +298,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-unstable": {
+      "locked": {
+        "lastModified": 1665580254,
+        "narHash": "sha256-hO61XPkp1Hphl4HGNzj1VvDH5URt7LI6LaY/385Eul4=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "f634d427b0224a5f531ea5aa10c3960ba6ec5f0f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "radio-conf": {
       "inputs": {
         "nixpkgs": [
@@ -326,7 +342,8 @@
     "root": {
       "inputs": {
         "dump-dvb": "dump-dvb",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-unstable": "nixpkgs-unstable"
       }
     },
     "rust-analyzer-src": {
@@ -448,11 +465,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1663019013,
-        "narHash": "sha256-Fo04ojkpMnyHk4fBn3D7dienNvFYpQ8yOyXnbBqzjXA=",
+        "lastModified": 1665683684,
+        "narHash": "sha256-quJgnhqsTvBjM1cxn4JA9QJcbwy+N8T1QiX1y6mbR+Q=",
         "owner": "dump-dvb",
         "repo": "wartrammer-40k",
-        "rev": "c715ee742a5a831dd80a40e4686102cd3cc0f44a",
+        "rev": "79493ae0a27f99fe1af86e7aee323c7c6948f196",
         "type": "github"
       },
       "original": {

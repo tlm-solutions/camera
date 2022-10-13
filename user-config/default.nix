@@ -1,4 +1,9 @@
-{ lib, config, pkgs, ... }: {
+{ lib, config, pkgs, ... }:
+{
+  imports = [
+    ./user.nix
+  ];
+
   # Any settings you wish to change should go here, /modules will be overwritten on update
 
   ## Set Radio Parameters

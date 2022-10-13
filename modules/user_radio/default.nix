@@ -1,7 +1,4 @@
 { lib, ... }: {
-  imports = [
-    ./user.nix
-  ];
   dump-dvb.gnuradio = lib.mkDefault {
     # by default - Dresden RTL-SDR config
     enable = true;
@@ -17,6 +14,4 @@
     enable = true;
     server = [ "http://10.13.37.1:8080" "http://10.13.37.5:8080" ];
   };
-
-  system.stateVersion = "22.05";
 }

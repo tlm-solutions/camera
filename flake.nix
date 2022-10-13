@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixos-22.05;
+    nixpkgs-unstable.url = github:NixOS/nixpkgs/nixos-unstable;
 
     dump-dvb = {
       url = github:dump-dvb/dump-dvb.nix;
@@ -13,6 +14,7 @@
   outputs =
     inputs@{ self
     , nixpkgs
+    , nixpkgs-unstable
     , dump-dvb
     }:
     let
@@ -23,6 +25,7 @@
         let
           hosts = [
             "user_radio"
+            "mobile_box_dresden"
           ];
         in
         map (x: assert lib.assertMsg (!(lib.hasInfix "-" x)) "hosts string cannot contain -"; x) hosts;
@@ -63,8 +66,15 @@
               {
                 nixpkgs.overlays = [
                   dump-dvb.overlays.default
+
+                  # override flutter input from nixpkgs-unstable, it should be propagted to the next release 22.11
+                  (self: super: {
+                    flutterPackages = (super.callPackage "${nixpkgs-unstable}/pkgs/development/compilers/flutter" { });
+                  })
                 ];
                 networking.hostName = lib.mkForce "${host}-${device}";
+                # adjust this variable to the nixpkgs version defined in the inputs
+                system.stateVersion = lib.mkDefault "22.05";
               }
             ];
           };
