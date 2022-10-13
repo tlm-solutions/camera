@@ -3,33 +3,6 @@
     "click": {
       "inputs": {
         "nixpkgs": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "nixpkgs"
-        ],
-        "utils": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "utils"
-        ]
-      },
-      "locked": {
-        "lastModified": 1663799423,
-        "narHash": "sha256-IPflrTeXkcTCSKmZnQHUCjfqkka/UiS3Im0cu/bHl6k=",
-        "owner": "dump-dvb",
-        "repo": "click",
-        "rev": "4bf0ee3304556bd2a00cc5658409ffb38b9c386f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dump-dvb",
-        "repo": "click",
-        "type": "github"
-      }
-    },
-    "click_2": {
-      "inputs": {
-        "nixpkgs": [
           "dump-dvb",
           "nixpkgs"
         ],
@@ -53,38 +26,6 @@
       }
     },
     "clicky-bunty-server": {
-      "inputs": {
-        "naersk": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "naersk"
-        ],
-        "nixpkgs": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "nixpkgs"
-        ],
-        "utils": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "utils"
-        ]
-      },
-      "locked": {
-        "lastModified": 1663719647,
-        "narHash": "sha256-mq0Zmj9hzO/8KlBdrBKXFnD+4/DMtfDXJ4XpoKz6Aus=",
-        "owner": "dump-dvb",
-        "repo": "clicky-bunty-server",
-        "rev": "a483e2e263c44e08d6d51fd6a4048b9bf8ac1851",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dump-dvb",
-        "repo": "clicky-bunty-server",
-        "type": "github"
-      }
-    },
-    "clicky-bunty-server_2": {
       "inputs": {
         "naersk": [
           "dump-dvb",
@@ -116,38 +57,6 @@
     "data-accumulator": {
       "inputs": {
         "naersk": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "naersk"
-        ],
-        "nixpkgs": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "nixpkgs"
-        ],
-        "utils": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "utils"
-        ]
-      },
-      "locked": {
-        "lastModified": 1662581352,
-        "narHash": "sha256-YtUlP1EkuAxHk5hJ9GRX0RA1WI1BuShUCJ7o3Z63sSg=",
-        "owner": "dump-dvb",
-        "repo": "data-accumulator",
-        "rev": "29d139f128907ce9cb5d476ff00a3e1e1de24182",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dump-dvb",
-        "repo": "data-accumulator",
-        "type": "github"
-      }
-    },
-    "data-accumulator_2": {
-      "inputs": {
-        "naersk": [
           "dump-dvb",
           "naersk"
         ],
@@ -171,68 +80,12 @@
       "original": {
         "owner": "dump-dvb",
         "repo": "data-accumulator",
-        "type": "github"
-      }
-    },
-    "ddvb-deployment": {
-      "inputs": {
-        "documentation-src": "documentation-src",
-        "dump-dvb": "dump-dvb",
-        "microvm": "microvm",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "sops-nix": "sops-nix"
-      },
-      "locked": {
-        "lastModified": 1665361733,
-        "narHash": "sha256-KivlFBo10T7PfOPK79yYIPn+arX/6TS5mF0d6XHAgLM=",
-        "owner": "dump-dvb",
-        "repo": "nix-config",
-        "rev": "fb9aa599f830fec1c4cd22ae150d83d4a20ab566",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dump-dvb",
-        "repo": "nix-config",
         "type": "github"
       }
     },
     "decode-server": {
       "inputs": {
         "naersk": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "naersk"
-        ],
-        "nixpkgs": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "nixpkgs"
-        ],
-        "utils": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "utils"
-        ]
-      },
-      "locked": {
-        "lastModified": 1664531762,
-        "narHash": "sha256-c2uxy+oakQTk3rZwfSqSQqp7YXbIAQhqyqNEKPjWFHM=",
-        "owner": "dump-dvb",
-        "repo": "decode-server",
-        "rev": "6c12b1ab3ea2d80d63454d13a92fe15a93ba9973",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dump-dvb",
-        "repo": "decode-server",
-        "type": "github"
-      }
-    },
-    "decode-server_2": {
-      "inputs": {
-        "naersk": [
           "dump-dvb",
           "naersk"
         ],
@@ -256,22 +109,6 @@
       "original": {
         "owner": "dump-dvb",
         "repo": "decode-server",
-        "type": "github"
-      }
-    },
-    "documentation-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1664745127,
-        "narHash": "sha256-kq0qvmXz/gaJPtU4O43chNZulP4haXRXunjJF2gpKZk=",
-        "owner": "dump-dvb",
-        "repo": "documentation",
-        "rev": "be20b49cc2b25e2b77c3d9ac25044121d7d4dfe0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dump-dvb",
-        "repo": "documentation",
         "type": "github"
       }
     },
@@ -286,7 +123,6 @@
         "funnel": "funnel",
         "naersk": "naersk",
         "nixpkgs": [
-          "ddvb-deployment",
           "nixpkgs"
         ],
         "radio-conf": "radio-conf",
@@ -297,11 +133,11 @@
         "windshield": "windshield"
       },
       "locked": {
-        "lastModified": 1665259457,
-        "narHash": "sha256-iBwH7xcpoGpXvmqMdc4wtWU9iv3/Oo5YZLVHtYXxTx0=",
+        "lastModified": 1665264487,
+        "narHash": "sha256-BUC7vSsIkbAcHkZJOuAOWEB5umidhjhEl7u9QiIigfA=",
         "owner": "dump-dvb",
         "repo": "dump-dvb.nix",
-        "rev": "11276150f75ae3074ca548a046498fdab8618d8e",
+        "rev": "6f07a1caa84811910f01d3dfd3ad4b70505f5b94",
         "type": "github"
       },
       "original": {
@@ -311,28 +147,6 @@
       }
     },
     "dump-dvb-rs": {
-      "inputs": {
-        "nixpkgs": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1665167935,
-        "narHash": "sha256-cVBjeJt+tNuW26BTrztsHxzOl4RjqTZhs1lA3jAqRww=",
-        "owner": "dump-dvb",
-        "repo": "dump-dvb.rs",
-        "rev": "9e260af4e75685e6a8efe2f09702aa62fd46a0f9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dump-dvb",
-        "repo": "dump-dvb.rs",
-        "type": "github"
-      }
-    },
-    "dump-dvb-rs_2": {
       "inputs": {
         "nixpkgs": [
           "dump-dvb",
@@ -369,89 +183,7 @@
         "type": "github"
       }
     },
-    "dump-dvb-rust_2": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1660926193,
-        "narHash": "sha256-FPFXx3MKWgwSWju7gMgQrWvcTrddTHoB9ccQuI6A3m0=",
-        "owner": "dump-dvb",
-        "repo": "dump-dvb.rs",
-        "rev": "a21ff43262cb69ec6ee221d3dd3fca83b265c964",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dump-dvb",
-        "repo": "dump-dvb.rs",
-        "type": "github"
-      }
-    },
-    "dump-dvb_2": {
-      "inputs": {
-        "click": "click_2",
-        "clicky-bunty-server": "clicky-bunty-server_2",
-        "data-accumulator": "data-accumulator_2",
-        "decode-server": "decode-server_2",
-        "dump-dvb-rs": "dump-dvb-rs_2",
-        "dvb-api": "dvb-api_2",
-        "funnel": "funnel_2",
-        "naersk": "naersk_2",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "radio-conf": "radio-conf_2",
-        "stops": "stops_2",
-        "trekkie": "trekkie_2",
-        "utils": "utils_4",
-        "wartrammer": "wartrammer_2",
-        "windshield": "windshield_2"
-      },
-      "locked": {
-        "lastModified": 1665264487,
-        "narHash": "sha256-BUC7vSsIkbAcHkZJOuAOWEB5umidhjhEl7u9QiIigfA=",
-        "owner": "dump-dvb",
-        "repo": "dump-dvb.nix",
-        "rev": "6f07a1caa84811910f01d3dfd3ad4b70505f5b94",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dump-dvb",
-        "repo": "dump-dvb.nix",
-        "type": "github"
-      }
-    },
     "dvb-api": {
-      "inputs": {
-        "naersk": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "naersk"
-        ],
-        "nixpkgs": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "nixpkgs"
-        ],
-        "utils": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "utils"
-        ]
-      },
-      "locked": {
-        "lastModified": 1662834288,
-        "narHash": "sha256-WhZ0VLEknhystfiZtdhpTl9v9d6jR0efpli37HUjIoE=",
-        "owner": "dump-dvb",
-        "repo": "dvb-api",
-        "rev": "36692b1d34e99bc94303f57f354a25d480b75bc7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dump-dvb",
-        "repo": "dvb-api",
-        "type": "github"
-      }
-    },
-    "dvb-api_2": {
       "inputs": {
         "naersk": [
           "dump-dvb",
@@ -483,7 +215,6 @@
     "fenix": {
       "inputs": {
         "nixpkgs": [
-          "ddvb-deployment",
           "dump-dvb",
           "stops",
           "nixpkgs"
@@ -504,76 +235,10 @@
         "type": "github"
       }
     },
-    "fenix_2": {
-      "inputs": {
-        "nixpkgs": [
-          "dump-dvb",
-          "stops",
-          "nixpkgs"
-        ],
-        "rust-analyzer-src": "rust-analyzer-src_2"
-      },
-      "locked": {
-        "lastModified": 1651732109,
-        "narHash": "sha256-W3GuTyMxswHGfaYTQ4Ajev6GxfDef8YyxyYbFgrfwNk=",
-        "owner": "nix-community",
-        "repo": "fenix",
-        "rev": "4b6dda7529e6d1d8d2ce43b7cb18efdefd5c4c3c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "fenix",
-        "type": "github"
-      }
-    },
-    "flake-utils": {
-      "locked": {
-        "lastModified": 1659877975,
-        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
     "funnel": {
       "inputs": {
         "dump-dvb-rust": "dump-dvb-rust",
         "nixpkgs": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "nixpkgs"
-        ],
-        "utils": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "utils"
-        ]
-      },
-      "locked": {
-        "lastModified": 1662762215,
-        "narHash": "sha256-K8CpuwFoGifbR7jg9hplS7iyPbPlWf35skMCS/ltPQk=",
-        "owner": "dump-dvb",
-        "repo": "funnel",
-        "rev": "5ec433229c7307a455970a3e2360bcf44d9007db",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dump-dvb",
-        "repo": "funnel",
-        "type": "github"
-      }
-    },
-    "funnel_2": {
-      "inputs": {
-        "dump-dvb-rust": "dump-dvb-rust_2",
-        "nixpkgs": [
           "dump-dvb",
           "nixpkgs"
         ],
@@ -593,54 +258,10 @@
       "original": {
         "owner": "dump-dvb",
         "repo": "funnel",
-        "type": "github"
-      }
-    },
-    "microvm": {
-      "inputs": {
-        "flake-utils": "flake-utils",
-        "nixpkgs": [
-          "ddvb-deployment",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1664832850,
-        "narHash": "sha256-0q+bcoZ2BglBnDzQG4d0yw68ani/pZkg4++EZdY9ssI=",
-        "owner": "astro",
-        "repo": "microvm.nix",
-        "rev": "d7bb8188f20bbae0453c2a96a32317c8f626f4dd",
-        "type": "github"
-      },
-      "original": {
-        "owner": "astro",
-        "repo": "microvm.nix",
         "type": "github"
       }
     },
     "naersk": {
-      "inputs": {
-        "nixpkgs": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1662220400,
-        "narHash": "sha256-9o2OGQqu4xyLZP9K6kNe1pTHnyPz0Wr3raGYnr9AIgY=",
-        "owner": "nix-community",
-        "repo": "naersk",
-        "rev": "6944160c19cb591eb85bbf9b2f2768a935623ed3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "naersk",
-        "type": "github"
-      }
-    },
-    "naersk_2": {
       "inputs": {
         "nixpkgs": [
           "dump-dvb",
@@ -677,50 +298,7 @@
         "type": "github"
       }
     },
-    "nixpkgs-22_05": {
-      "locked": {
-        "lastModified": 1664201777,
-        "narHash": "sha256-cUW9DqELUNi1jNMwVSbfq4yl5YGyOfeu+UHUUImbby0=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "00f877f4927b6f7d7b75731b5a1e2ae7324eaf14",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "release-22.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "radio-conf": {
-      "inputs": {
-        "nixpkgs": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "nixpkgs"
-        ],
-        "utils": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "utils"
-        ]
-      },
-      "locked": {
-        "lastModified": 1664720630,
-        "narHash": "sha256-B4TWn8t3NQ+LyAyGDBFR2gy6aJoq1TNL+qkP1bIbluY=",
-        "owner": "dump-dvb",
-        "repo": "radio-conf",
-        "rev": "820a859d174fa40109c4d9e073c99bf526bf1470",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dump-dvb",
-        "repo": "radio-conf",
-        "type": "github"
-      }
-    },
-    "radio-conf_2": {
       "inputs": {
         "nixpkgs": [
           "dump-dvb",
@@ -747,8 +325,7 @@
     },
     "root": {
       "inputs": {
-        "ddvb-deployment": "ddvb-deployment",
-        "dump-dvb": "dump-dvb_2",
+        "dump-dvb": "dump-dvb",
         "nixpkgs": "nixpkgs"
       }
     },
@@ -769,81 +346,9 @@
         "type": "github"
       }
     },
-    "rust-analyzer-src_2": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1651656737,
-        "narHash": "sha256-+nc9Rrc1PBGAx2jXV57Af8WL4nQTTNGX2fp63YD7ynU=",
-        "owner": "rust-lang",
-        "repo": "rust-analyzer",
-        "rev": "1f709d54463972b189a3120be4073c507f2fbc00",
-        "type": "github"
-      },
-      "original": {
-        "owner": "rust-lang",
-        "ref": "nightly",
-        "repo": "rust-analyzer",
-        "type": "github"
-      }
-    },
-    "sops-nix": {
-      "inputs": {
-        "nixpkgs": [
-          "ddvb-deployment",
-          "nixpkgs"
-        ],
-        "nixpkgs-22_05": "nixpkgs-22_05"
-      },
-      "locked": {
-        "lastModified": 1664204020,
-        "narHash": "sha256-LAey3hr8b9EAt3n304Wt9Vm4uQFd8pSRtLX8leuYFDs=",
-        "owner": "Mic92",
-        "repo": "sops-nix",
-        "rev": "912f9ff41fd9353dec1f783170793699789fe9aa",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Mic92",
-        "repo": "sops-nix",
-        "type": "github"
-      }
-    },
     "stops": {
       "inputs": {
         "fenix": "fenix",
-        "naersk": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "naersk"
-        ],
-        "nixpkgs": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "nixpkgs"
-        ],
-        "utils": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "utils"
-        ]
-      },
-      "locked": {
-        "lastModified": 1663023066,
-        "narHash": "sha256-coo56nfKCpI3LcNJz7J/dWDvEBZATpd2xIbE9ZnkAig=",
-        "owner": "dump-dvb",
-        "repo": "stop-names",
-        "rev": "232ed7bc4b1f961d798627ebaf392e705877cbbf",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dump-dvb",
-        "repo": "stop-names",
-        "type": "github"
-      }
-    },
-    "stops_2": {
-      "inputs": {
-        "fenix": "fenix_2",
         "naersk": [
           "dump-dvb",
           "naersk"
@@ -874,42 +379,14 @@
     "trekkie": {
       "inputs": {
         "naersk": [
-          "ddvb-deployment",
           "dump-dvb",
           "naersk"
         ],
         "nixpkgs": [
-          "ddvb-deployment",
           "dump-dvb",
           "nixpkgs"
         ],
         "utils": "utils"
-      },
-      "locked": {
-        "lastModified": 1665257799,
-        "narHash": "sha256-qUhhJHbTVimEIf1JApfo4nGKM32h1pakmvDqk38n84w=",
-        "owner": "dump-dvb",
-        "repo": "trekkie",
-        "rev": "03695a049c27c312f5df607b43e523eb021019e1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dump-dvb",
-        "repo": "trekkie",
-        "type": "github"
-      }
-    },
-    "trekkie_2": {
-      "inputs": {
-        "naersk": [
-          "dump-dvb",
-          "naersk"
-        ],
-        "nixpkgs": [
-          "dump-dvb",
-          "nixpkgs"
-        ],
-        "utils": "utils_3"
       },
       "locked": {
         "lastModified": 1665257799,
@@ -955,69 +432,7 @@
         "type": "github"
       }
     },
-    "utils_3": {
-      "locked": {
-        "lastModified": 1659877975,
-        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
-    "utils_4": {
-      "locked": {
-        "lastModified": 1659877975,
-        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
     "wartrammer": {
-      "inputs": {
-        "naersk": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "naersk"
-        ],
-        "nixpkgs": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "nixpkgs"
-        ],
-        "utils": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "utils"
-        ]
-      },
-      "locked": {
-        "lastModified": 1663019013,
-        "narHash": "sha256-Fo04ojkpMnyHk4fBn3D7dienNvFYpQ8yOyXnbBqzjXA=",
-        "owner": "dump-dvb",
-        "repo": "wartrammer-40k",
-        "rev": "c715ee742a5a831dd80a40e4686102cd3cc0f44a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dump-dvb",
-        "repo": "wartrammer-40k",
-        "type": "github"
-      }
-    },
-    "wartrammer_2": {
       "inputs": {
         "naersk": [
           "dump-dvb",
@@ -1047,33 +462,6 @@
       }
     },
     "windshield": {
-      "inputs": {
-        "nixpkgs": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "nixpkgs"
-        ],
-        "utils": [
-          "ddvb-deployment",
-          "dump-dvb",
-          "utils"
-        ]
-      },
-      "locked": {
-        "lastModified": 1662736161,
-        "narHash": "sha256-piQA7/tmx4Y6UuqpWgiOrreEvaRejdjgWSuqoeHOrBU=",
-        "owner": "dump-dvb",
-        "repo": "windshield",
-        "rev": "bba48f785ba92a383cb01fd7bd7ce9c0906aa8a7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dump-dvb",
-        "repo": "windshield",
-        "type": "github"
-      }
-    },
-    "windshield_2": {
       "inputs": {
         "nixpkgs": [
           "dump-dvb",

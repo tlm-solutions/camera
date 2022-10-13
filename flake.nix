@@ -8,18 +8,12 @@
       url = github:dump-dvb/dump-dvb.nix;
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    ddvb-deployment = {
-      url = github:dump-dvb/nix-config;
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
     inputs@{ self
     , nixpkgs
     , dump-dvb
-    , ddvb-deployment
     }:
     let
       pkgs = nixpkgs.legacyPackages."x86_64-linux";
