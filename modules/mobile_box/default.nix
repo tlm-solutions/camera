@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ lib, pkgs, config, ... }:
 {
   dump-dvb = {
     gnuradio = {
@@ -25,7 +25,10 @@
       Type = "simple";
     };
     script = ''
-      ${pkgs.linux-router}/bin/lnxrouter --ap wlp0s20u2 dump-dvb -g 10.3.141.1 -p trolling-dvb
+      ${pkgs.linux-router}/bin/lnxrouter --ap wlan0 dump-dvb -g 10.3.141.1 -p trolling-dvb
     '';
   };
+
+  # make sure wifi interface is called wlan0
+  networking.usePredictableInterfaceNames = lib.mkForce false;
 }
