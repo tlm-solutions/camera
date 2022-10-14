@@ -26,6 +26,7 @@
           hosts = [
             "user_radio"
             "mobile_box_dresden"
+            "mobile_box_chemnitz"
           ];
         in
         map (x: assert lib.assertMsg (!(lib.hasInfix "-" x)) "hosts string cannot contain -"; x) hosts;
