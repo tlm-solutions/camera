@@ -9,6 +9,6 @@
       frequency = 153850000;
       offset = 20000;
     };
-    telegramDecoder.region = 1;
+    wartrammer.region = 1;
   };
 }
