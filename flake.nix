@@ -95,8 +95,7 @@
 
       packages."x86_64-linux" = packages_vms // packages_img_x86 // packages_img_aarch64;
 
-      # production-ready software! TIL that hydra cannot do spaces in the JobName
-      # hydraJobs = (lib.mapAttrs (k: v: { "x86_64-linux" = v; }) (packages_img_x86)) //
-      #   (lib.mapAttrs (k: v: { "aarch64-linux" = v; }) (packages_img_aarch64));
+      hydraJobs = (lib.mapAttrs (k: v: { "x86_64-linux" = v; }) (packages_img_x86)) //
+        (lib.mapAttrs (k: v: { "aarch64-linux" = v; }) (packages_img_aarch64));
     };
 }
