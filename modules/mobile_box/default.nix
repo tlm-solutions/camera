@@ -27,6 +27,22 @@
 
   networking.firewall.allowedTCPPorts = [ 80 config.dump-dvb.wartrammer.port ];
 
+  hardware = {
+    hackrf.enable = true;
+    rtl-sdr.enable = true;
+  };
+
+  environment.systemPackages = with pkgs; [
+    rtl-sdr
+    hackrf
+    usbutils
+    tcpdump
+    nmap
+    tmux
+    neovim
+    git
+  ];
+
   systemd.services."start-wifi-hotspot" = {
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
