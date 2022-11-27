@@ -10,6 +10,6 @@
       frequency = 170435000;
       offset = 20000;
     };
-    wartrammer.region = 4;
+    wartrammer.region = 2;
   };
 }

@@ -10,6 +10,6 @@
       frequency = 150915000;
       offset = 20000;
     };
-    wartrammer.region = 5; # Hannover
+    wartrammer.region = 4; # Hannover
   };
 }
