@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     tlms = {
       url = "github:tlm-solutions/tlms.nix";
@@ -14,7 +13,6 @@
   outputs =
     inputs@{ self
     , nixpkgs
-    , nixpkgs-unstable
     , tlms
     }:
     let
@@ -69,11 +67,6 @@
               {
                 nixpkgs.overlays = [
                   tlms.overlays.default
-
-                  # override flutter input from nixpkgs-unstable, it should be propagted to the next release 22.11
-                  (self: super: {
-                    flutterPackages = (super.callPackage "${nixpkgs-unstable}/pkgs/development/compilers/flutter" { });
-                  })
                 ];
                 networking.hostName = lib.mkForce "${host}-${device}";
                 # adjust this variable to the nixpkgs version defined in the inputs
