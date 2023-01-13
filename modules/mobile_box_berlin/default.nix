@@ -4,7 +4,7 @@
     ../mobile_box/default.nix
   ];
 
-  dump-dvb = {
+  TLMS = {
     # 170.45MHz + 5kHz offset for hackrf...
     gnuradio = {
       frequency = 170435000;

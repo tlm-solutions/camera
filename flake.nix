@@ -2,11 +2,11 @@
   description = "It makes Images";
 
   inputs = {
-    nixpkgs.url = github:NixOS/nixpkgs/nixos-22.05;
-    nixpkgs-unstable.url = github:NixOS/nixpkgs/nixos-unstable;
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    dump-dvb = {
-      url = github:dump-dvb/dump-dvb.nix;
+    tlms = {
+      url = "github:tlm-solutions/tlms.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -15,7 +15,7 @@
     inputs@{ self
     , nixpkgs
     , nixpkgs-unstable
-    , dump-dvb
+    , tlms
     }:
     let
       pkgs = nixpkgs.legacyPackages."x86_64-linux";
@@ -59,16 +59,16 @@
             system = arch;
             specialArgs = {
               inherit inputs;
-              diskModule = inputs.dump-dvb.nixosModules.disk-module;
+              diskModule = inputs.tlms.nixosModules.disk-module;
             };
             modules = [
-              dump-dvb.nixosModules.default
+              tlms.nixosModules.default
               ./modules/${host}
               ./modules/device-specific/${device}
               ./user-config
               {
                 nixpkgs.overlays = [
-                  dump-dvb.overlays.default
+                  tlms.overlays.default
 
                   # override flutter input from nixpkgs-unstable, it should be propagted to the next release 22.11
                   (self: super: {

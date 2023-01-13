@@ -1,6 +1,6 @@
 { lib, pkgs, config, ... }:
 {
-  dump-dvb = {
+  TLMS = {
     gnuradio = {
       enable = true;
       device = "";
@@ -10,7 +10,7 @@
     };
     telegramDecoder = {
       enable = true;
-      server = [ "http://127.0.0.1:${toString config.dump-dvb.wartrammer.port}" ];
+      server = [ "http://127.0.0.1:${toString config.TLMS.wartrammer.port}" ];
       offline = true;
       configFile = pkgs.writeScript "config.json" ''
         {
@@ -18,14 +18,14 @@
             "lat": 0,
             "lon": 0,
             "id": "00000000-0000-0000-0000-000000000000",
-            "region": ${toString config.dump-dvb.wartrammer.region}
+            "region": ${toString config.TLMS.wartrammer.region}
         }
       '';
     };
     wartrammer.enable = true;
   };
 
-  networking.firewall.allowedTCPPorts = [ 80 config.dump-dvb.wartrammer.port ];
+  networking.firewall.allowedTCPPorts = [ 80 config.TLMS.wartrammer.port ];
 
   hardware = {
     hackrf.enable = true;

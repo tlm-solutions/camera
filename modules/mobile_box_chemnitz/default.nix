@@ -4,7 +4,7 @@
     ../mobile_box/default.nix
   ];
 
-  dump-dvb = {
+  TLMS = {
     gnuradio = {
       frequency = 153850000;
       offset = 20000;
